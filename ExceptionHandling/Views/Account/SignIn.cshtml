@@ -1,0 +1,14 @@
+﻿@model ExceptionHandling.Models.LoginInfo
+@{
+    ViewBag.Title = "SignIn";
+}
+@Html.ValidationSummary()
+@if (ViewBag.Messages != null)
+{ 
+    @ViewBag.Messages
+}
+@using (Html.BeginForm())
+{ 
+    @Html.EditorForModel()
+    <input type="submit" value="SignIn" />
+}
